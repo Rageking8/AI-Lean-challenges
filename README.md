@@ -35,3 +35,14 @@ theorem no_distinct_irreducible_two_over_n_sum :
       (∑ n ∈ S, (2 : ℚ) / (n : ℚ)) = 5 / 121 := by
   sorry
 ```
+
+## 4. Prove that $\left\lvert\ln{x}\right\rvert + \left\lvert\ln{y}\right\rvert \geq 2\ln{\left(\frac{x + y}{2\sqrt{xy}}\right)}$
+
+```lean4
+import Mathlib
+
+theorem log_abs_sum_lower_bound (x y : ℝ) (hx : 0 < x) (hy : 0 < y) :
+    |Real.log x| + |Real.log y| ≥
+      2 * Real.log ((x + y) / (2 * Real.sqrt (x * y))) := by
+  sorry
+```
