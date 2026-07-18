@@ -24,3 +24,14 @@ theorem sin_mul_upper_bound
       (3 * Real.sqrt 3) / 8 := by
   sorry
 ```
+
+## 3. Prove that no finite sum of distinct irreducible fractions $\frac{2}{n}$ equal $\frac{5}{121}$
+
+```lean4
+import Mathlib
+
+theorem no_distinct_irreducible_two_over_n_sum :
+    ¬ ∃ (S : Finset ℕ), (∀ n ∈ S, n > 0 ∧ Nat.Coprime 2 n) ∧
+      (∑ n ∈ S, (2 : ℚ) / (n : ℚ)) = 5 / 121 := by
+  sorry
+```
