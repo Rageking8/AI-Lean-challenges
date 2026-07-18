@@ -12,7 +12,7 @@ theorem ceil_pow_expr_odd (x : ℕ) :
   sorry
 ```
 
-## 2. Given $x + y + z = \pi$, prove that $\sin{x}\sin{y}\sin{z} \le \frac{3\sqrt{3}}{8}$
+## 2. Prove that if $x + y + z = \pi$, then $\sin{x}\sin{y}\sin{z} \le \frac{3\sqrt{3}}{8}$
 
 ```lean4
 import Mathlib
@@ -25,7 +25,7 @@ theorem sin_mul_upper_bound
   sorry
 ```
 
-## 3. Prove that no finite sum of distinct irreducible fractions $\frac{2}{n}$ equal $\frac{5}{121}$
+## 3. Prove that no finite sum of distinct irreducible fractions of the form $\frac{2}{n}$ equals $\frac{5}{121}$
 
 ```lean4
 import Mathlib
