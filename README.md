@@ -66,3 +66,13 @@ theorem no_mod_mod_mod_eq_gcd (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < 
     ((x % y) % z) * ((y % z) % x) * ((z % x) % y) ≠ Nat.gcd x (Nat.gcd y z) := by
   sorry
 ```
+
+## 7. Let $S(n)$ be the base-10 digit sum of $n$. Prove that for all positive integers $n$ and $x$, $S(n^x) \leq S(n)^x$
+
+```lean4
+import Mathlib
+
+theorem digit_sum_pow_le (n x : ℕ) (hn : 0 < n) (hx : 0 < x) :
+    (Nat.digits 10 (n ^ x)).sum ≤ ((Nat.digits 10 n).sum) ^ x := by
+  sorry
+```
