@@ -56,3 +56,13 @@ theorem power_tower_inequality {x y : ℝ} (h1 : 1 < x) (h2 : x < y) (h3 : x ^ y
     x ^ (y ^ y) > y ^ (x ^ x) := by
   sorry
 ```
+
+## 6. Prove that no natural x, y, z > 0 satisfies $((x \bmod y) \bmod z)((y \bmod z) \bmod x)((z \bmod x) \bmod y) = gcd(x, y, z)$
+
+```lean4
+import Mathlib
+
+theorem no_mod_mod_mod_eq_gcd (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) :
+    ((x % y) % z) * ((y % z) % x) * ((z % x) % y) ≠ Nat.gcd x (Nat.gcd y z) := by
+  sorry
+```
