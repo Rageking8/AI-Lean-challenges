@@ -46,3 +46,13 @@ theorem log_abs_sum_lower_bound (x y : ℝ) (hx : 0 < x) (hy : 0 < y) :
       2 * Real.log ((x + y) / (2 * Real.sqrt (x * y))) := by
   sorry
 ```
+
+## 5. Prove that if $1 < x < y$ and $x^y = y^x$, then $x^{y^y} > y^{x^x}$
+
+```lean4
+import Mathlib
+
+theorem power_tower_inequality {x y : ℝ} (h1 : 1 < x) (h2 : x < y) (h3 : x ^ y = y ^ x) :
+    x ^ (y ^ y) > y ^ (x ^ x) := by
+  sorry
+```
