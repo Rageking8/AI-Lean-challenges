@@ -76,3 +76,13 @@ theorem digit_sum_pow_le (n x : ℕ) (hn : 0 < n) (hx : 0 < x) :
     (Nat.digits 10 (n ^ x)).sum ≤ ((Nat.digits 10 n).sum) ^ x := by
   sorry
 ```
+
+## 8. Prove that there are no positive integers $x$ and $y$ such that $x^2 + 2x \mid y^2 + 1$
+
+```lean4
+import Mathlib
+
+theorem no_x_sq_plus_two_x_dvd_y_sq_plus_one (x y : ℕ) (hx : 0 < x) (hy : 0 < y) :
+    ¬ (x^2 + 2*x ∣ y^2 + 1) := by
+  sorry
+```
