@@ -57,7 +57,7 @@ theorem power_tower_inequality {x y : ℝ} (h1 : 1 < x) (h2 : x < y) (h3 : x ^ y
   sorry
 ```
 
-## 6. Prove that no natural x, y, z > 0 satisfies $((x \bmod y) \bmod z)((y \bmod z) \bmod x)((z \bmod x) \bmod y) = gcd(x, y, z)$
+## 6. Prove that there are no positive integers $x$, $y$, and $z$ such that $((x \bmod y) \bmod z)((y \bmod z) \bmod x)((z \bmod x) \bmod y) = gcd(x, y, z)$
 
 ```lean4
 import Mathlib
