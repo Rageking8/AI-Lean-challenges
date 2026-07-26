@@ -96,3 +96,13 @@ theorem eq_one_of_dvd_pow_add_one (n : ℕ) (hn : 0 < n) (h2 : n ∣ 2^n + 1) (h
     n = 1 := by
   sorry
 ```
+
+## 10. Prove that there are no natural numbers $x$ and $y$ such that $(((x^3 + y^3) \bmod 18) \bmod 17) = 15$
+
+```lean4
+import Mathlib
+
+theorem no_nat_cube_sum_mod_eq (x y : ℕ) :
+    (((x^3 + y^3) % 18) % 17) ≠ 15 := by
+  sorry
+```
