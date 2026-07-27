@@ -2,7 +2,10 @@
 
 Model: `claude-opus-5-high` (via Arena AI)\
 Date: `25 July 2026`\
-Line count: `78`
+Line count: `78`\
+Turn count: `1`
+
+## Solution
 
 ```lean4
 import Mathlib
