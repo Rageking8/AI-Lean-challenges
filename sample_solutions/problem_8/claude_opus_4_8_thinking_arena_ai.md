@@ -2,7 +2,8 @@
 
 Model: `claude-opus-4-8-thinking` (via Arena AI)\
 Date: `24 July 2026`\
-Line count: `68`
+Line count: `68`\
+Turn count: `1 + external edit`
 
 ## Note
 
@@ -13,7 +14,7 @@ The model's output contained a small error on line 32 which can be fixed as foll
 +        have h1 : 2 * m ≤ p * m := Nat.mul_le_mul_right m hp.two_le
 ```
 
-## Fixed version
+## Fixed solution
 
 ```lean4
 import Mathlib
