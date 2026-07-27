@@ -106,3 +106,13 @@ theorem no_nat_cube_sum_mod_eq (x y : ℕ) :
     (((x^3 + y^3) % 18) % 17) ≠ 15 := by
   sorry
 ```
+
+## 11. Prove that there are no real numbers $x$ and $y$ such that $x^2 + y^2 + 4 = 2\sqrt{x^2y + xy^2 + x + y}$
+
+```lean4
+import Mathlib
+
+theorem no_real_solutions_x2_y2_4 (x y : ℝ) :
+    x^2 + y^2 + 4 ≠ 2 * Real.sqrt (x^2 * y + x * y^2 + x + y) := by
+  sorry
+```
