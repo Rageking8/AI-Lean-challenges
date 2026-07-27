@@ -2,7 +2,10 @@
 
 Model: `claude-fable-5` (via Arena AI)\
 Date: `24 July 2026`\
-Line count: `127`
+Line count: `127`\
+Turn count: `1`
+
+## Solution
 
 ```lean4
 import Mathlib
