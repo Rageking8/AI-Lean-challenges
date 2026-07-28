@@ -139,3 +139,14 @@ theorem ceil_floor_eq_solutions (x : ℝ) (hx : 0 < x) :
     x ^ ⌈x⌉ = (⌈x⌉ : ℝ) ^ ⌊x⌋ + 1 ↔ x = Real.sqrt 3 ∨ x = (10 : ℝ) ^ (1 / 3 : ℝ) := by
   sorry
 ```
+
+## 14. Prove that if $x$ and $y$ are positive rational numbers such that $x^2 + y^2 + 1 = 3xy$, then $\sqrt{x + y}$ is irrational
+
+```lean4
+import Mathlib
+
+theorem sqrt_x_add_y_irrational (x y : ℚ) (hx : 0 < x) (hy : 0 < y)
+    (h : x^2 + y^2 + 1 = 3 * x * y) :
+      Irrational (Real.sqrt (x + y : ℝ)) := by
+  sorry
+```
