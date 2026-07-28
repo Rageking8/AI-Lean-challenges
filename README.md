@@ -116,3 +116,16 @@ theorem no_real_solutions_x2_y2_4 (x y : ℝ) :
     x^2 + y^2 + 4 ≠ 2 * Real.sqrt (x^2 * y + x * y^2 + x + y) := by
   sorry
 ```
+
+## 12. Prove that there are infinitely many triples of positive integers ($x$, $y$, $z$) such that $\frac{z^2}{x + y} + z = \frac{x^2 + 1}{y} + \frac{y^2 + 1}{x}$
+
+```lean4
+import Mathlib
+
+theorem infinite_solutions_z2_x_y_z :
+    Set.Infinite { (x, y, z) : ℕ × ℕ × ℕ |
+      0 < x ∧ 0 < y ∧ 0 < z ∧
+      ((z : ℚ) ^ 2 / ((x : ℚ) + (y : ℚ))) + (z : ℚ) =
+      (((x : ℚ) ^ 2 + 1) / (y : ℚ)) + (((y : ℚ) ^ 2 + 1) / (x : ℚ)) } := by
+  sorry
+```
