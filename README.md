@@ -163,3 +163,14 @@ theorem div_pm_mp_eq_one_zero (x y : ℝ) :
       (x = 1 ∧ y = 0) := by
   sorry
 ```
+
+## 16. Let $S(n)$ be the base-10 digit sum of $n$. Prove that for every natural number $k$, one can find a real polynomial $P$, such that there are exactly $k$ natural numbers $n$ satisfying the equation $n = P(S(n))$
+
+```lean4
+import Mathlib
+
+theorem exists_polynomial_with_k_digit_sum_solutions (k : ℕ) :
+    ∃ (P : Polynomial ℝ), ∃ (S : Finset ℕ), S.card = k ∧
+      ∀ (n : ℕ), n ∈ S ↔ (n : ℝ) = P.eval ((Nat.digits 10 n).sum : ℝ) := by
+  sorry
+```
