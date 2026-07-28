@@ -129,3 +129,13 @@ theorem infinite_solutions_z2_x_y_z :
       (((x : ℚ) ^ 2 + 1) / (y : ℚ)) + (((y : ℚ) ^ 2 + 1) / (x : ℚ)) } := by
   sorry
 ```
+
+## 13. Prove that the only positive real number solutions to $x^\left\lceil x \right\rceil = \left\lceil x \right\rceil^\left\lfloor x \right\rfloor + 1$ are $\sqrt{3}$ and $\sqrt[3]{10}$
+
+```lean4
+import Mathlib
+
+theorem ceil_floor_eq_solutions (x : ℝ) (hx : 0 < x) :
+    x ^ ⌈x⌉ = (⌈x⌉ : ℝ) ^ ⌊x⌋ + 1 ↔ x = Real.sqrt 3 ∨ x = (10 : ℝ) ^ (1 / 3 : ℝ) := by
+  sorry
+```
