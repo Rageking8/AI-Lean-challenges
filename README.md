@@ -150,3 +150,16 @@ theorem sqrt_x_add_y_irrational (x y : ℚ) (hx : 0 < x) (hy : 0 < y)
       Irrational (Real.sqrt (x + y : ℝ)) := by
   sorry
 ```
+
+## 15. Prove that the only real number solution to $\frac{x \pm y}{x \mp y} = (x \mp y)(2 - x \mp y)$ is $x = 1$ and $y = 0$
+
+```lean4
+import Mathlib
+
+theorem div_pm_mp_eq_one_zero (x y : ℝ) :
+    (x - y ≠ 0 ∧ x + y ≠ 0 ∧
+      (x + y) / (x - y) = (x - y) * (2 - x - y) ∧
+      (x - y) / (x + y) = (x + y) * (2 - x + y)) ↔
+      (x = 1 ∧ y = 0) := by
+  sorry
+```
