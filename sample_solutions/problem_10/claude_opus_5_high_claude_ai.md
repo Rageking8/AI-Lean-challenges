@@ -1,0 +1,22 @@
+# Claude Opus 5 High (Claude AI)
+
+Model: `Claude Opus 5 High` (via Claude AI)\
+Date: `29 July 2026`\
+Line count: `11`\
+Turn count: `1`
+
+## Solution
+
+```lean4
+import Mathlib
+
+theorem no_nat_cube_sum_mod_eq (x y : ℕ) :
+    (((x^3 + y^3) % 18) % 17) ≠ 15 := by
+  have key : ∀ a b : ℕ, a < 18 → b < 18 → (a ^ 3 + b ^ 3) % 18 % 17 ≠ 15 := by
+    intro a b ha hb
+    interval_cases a <;> interval_cases b <;> decide
+  have h : (x ^ 3 + y ^ 3) % 18 = ((x % 18) ^ 3 + (y % 18) ^ 3) % 18 := by
+    rw [Nat.add_mod, Nat.pow_mod, Nat.pow_mod y, ← Nat.add_mod]
+  rw [h]
+  exact key _ _ (Nat.mod_lt _ (by norm_num)) (Nat.mod_lt _ (by norm_num))
+```
