@@ -174,3 +174,13 @@ theorem exists_polynomial_with_k_digit_sum_solutions (k : ℕ) :
       ∀ (n : ℕ), n ∈ S ↔ (n : ℝ) = P.eval ((Nat.digits 10 n).sum : ℝ) := by
   sorry
 ```
+
+## 17. Let $\\{x\\}$ be the fractional part of $x$. Prove that the number of real solutions $x$ to the equation $\\{x\\}(1026002 - x - \lfloor x \rfloor^2) = 1$ is exactly 2026
+
+```lean4
+import Mathlib
+
+theorem real_solutions_count_2026 :
+    Set.ncard {x : ℝ | Int.fract x * (1026002 - x - (Int.floor x : ℝ) ^ 2) = 1} = 2026 := by
+  sorry
+```
