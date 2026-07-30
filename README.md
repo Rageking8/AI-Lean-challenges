@@ -184,3 +184,14 @@ theorem real_solutions_count_2026 :
     Set.ncard {x : ℝ | Int.fract x * (1026002 - x - (Int.floor x : ℝ) ^ 2) = 1} = 2026 := by
   sorry
 ```
+
+## 18. Prove that there is no natural number $n$ such that the combined base-10 digits of $n^2$ and $n^3$ contain each of the digits from 1 to 9 exactly twice
+
+```lean4
+import Mathlib
+
+theorem no_nat_sq_cube_digits_one_through_nine_twice :
+    ¬ ∃ (n : ℕ), List.Perm (Nat.digits 10 (n ^ 2) ++ Nat.digits 10 (n ^ 3))
+      (List.range' 1 9 ++ List.range' 1 9) := by
+  sorry
+```
