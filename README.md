@@ -231,3 +231,15 @@ theorem integral_fract_ceil (n : ℕ) (hn : 0 < n) :
       x * Int.fract ((n : ℝ) / x) * (Int.ceil ((n : ℝ) / x) : ℝ) = ((n : ℝ) ^ 2) / 2 := by
   sorry
 ```
+
+## 22. Prove that if $x$ and $y$ are positive real numbers such that $x^2 + y^2 = 1$, then $\frac{x^{2x}}{3y} + \frac{y^{2y}}{3x} \gt \frac{1}{x^2 + y^2 + 4xy}$
+
+```lean4
+import Mathlib
+
+theorem positive_real_inequality (x y : ℝ)
+    (hx : 0 < x) (hy : 0 < y)
+      (h_sum : x ^ 2 + y ^ 2 = 1) :
+      ((x ^ (2 * x)) / (3 * y)) + ((y ^ (2 * y)) / (3 * x)) > 1 / (x ^ 2 + y ^ 2 + 4 * x * y) := by
+  sorry
+```
