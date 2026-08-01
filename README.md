@@ -243,3 +243,14 @@ theorem positive_real_inequality (x y : ℝ)
       ((x ^ (2 * x)) / (3 * y)) + ((y ^ (2 * y)) / (3 * x)) > 1 / (x ^ 2 + y ^ 2 + 4 * x * y) := by
   sorry
 ```
+
+## 23. Prove that if $x$ and $y$ are distinct positive real numbers such that $x^y = y^x$, then $e^{x + y} \lt x^x \cdot y^y$
+
+```lean4
+import Mathlib
+
+theorem distinct_pos_real_power_ineq (x y : ℝ) (hx : 0 < x) (hy : 0 < y)
+    (hne : x ≠ y) (h : x ^ y = y ^ x) :
+      Real.exp (x + y) < (x ^ x) * (y ^ y) := by
+  sorry
+```
