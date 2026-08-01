@@ -218,3 +218,16 @@ theorem digit_sum_polynomial_le (P : Polynomial ℕ) (n : ℕ) (hn : 0 < n) :
     (Nat.digits 10 (P.eval n)).sum ≤ P.eval (Nat.digits 10 n).sum := by
   sorry
 ```
+
+## 21. Let $\\{x\\}$ be the fractional part of $x$. Prove that for all positive integers $n$, $\displaystyle\int_{0}^{n} x \cdot \left\\{\frac{n}{x}\right\\} \cdot \left\lceil\frac{n}{x}\right\rceil \\, dx = \frac{n^2}{2}$
+
+```lean4
+import Mathlib
+
+open MeasureTheory
+
+theorem integral_fract_ceil (n : ℕ) (hn : 0 < n) :
+    ∫ x in (0 : ℝ)..(n : ℝ),
+      x * Int.fract ((n : ℝ) / x) * (Int.ceil ((n : ℝ) / x) : ℝ) = ((n : ℝ) ^ 2) / 2 := by
+  sorry
+```
