@@ -254,3 +254,16 @@ theorem distinct_pos_real_power_ineq (x y : ℝ) (hx : 0 < x) (hy : 0 < y)
       Real.exp (x + y) < (x ^ x) * (y ^ y) := by
   sorry
 ```
+
+## 24. Let $S(n)$ be the base-10 digit sum of $n$. Prove that $\displaystyle\sum_{n = 3 \atop S(n) \ge 2}^{\infty} \frac{1}{n \cdot S(n) \cdot ln(S(n))}$ diverges
+
+```lean4
+import Mathlib
+
+theorem digit_sum_series_diverges :
+    ¬ Summable (fun n : ℕ =>
+      if n ≥ 3 ∧ (Nat.digits 10 n).sum ≥ 2 then
+      1 / ((n : ℝ) * ((Nat.digits 10 n).sum : ℝ) * Real.log ((Nat.digits 10 n).sum : ℝ))
+      else 0) := by
+  sorry
+```
