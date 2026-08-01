@@ -208,3 +208,13 @@ theorem series_lcm_converges :
       ((35 / 6 : ℝ) - ((55 * Real.pi ^ 2) / 96)) := by
   sorry
 ```
+
+## 20. Let $S(n)$ be the base-10 digit sum of $n$ and $P(n)$ be a polynomial with non-negative integer coefficients. Prove that for all positive integers $n$, $S(P(n)) \le P(S(n))$
+
+```lean4
+import Mathlib
+
+theorem digit_sum_polynomial_le (P : Polynomial ℕ) (n : ℕ) (hn : 0 < n) :
+    (Nat.digits 10 (P.eval n)).sum ≤ P.eval (Nat.digits 10 n).sum := by
+  sorry
+```
