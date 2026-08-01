@@ -195,3 +195,16 @@ theorem no_nat_sq_cube_digits_one_through_nine_twice :
       (List.range' 1 9 ++ List.range' 1 9) := by
   sorry
 ```
+
+## 19. Prove that $\displaystyle\sum_{n = 1}^{\infty} \frac{n(n + 4)}{lcm(n, n + 2, n + 4)^2} = \frac{35}{6} - \frac{55\pi^2}{96}$
+
+```lean4
+import Mathlib
+
+theorem series_lcm_converges :
+    HasSum (fun (n : ℕ) =>
+      let n' := n + 1
+      ((n' : ℝ) * (n' + 4)) / ((Nat.lcm (Nat.lcm n' (n' + 2)) (n' + 4) : ℝ) ^ 2))
+      ((35 / 6 : ℝ) - ((55 * Real.pi ^ 2) / 96)) := by
+  sorry
+```
