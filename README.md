@@ -267,3 +267,13 @@ theorem digit_sum_series_diverges :
       else 0) := by
   sorry
 ```
+
+## 25. Prove that the only positive real solutions to $\displaystyle\sqrt{2(x - 3)\smash{^2} + 4} = \sqrt{\tfrac{12}{x}}$ are $x = 1$ or $2$ or $3$
+
+```lean4
+import Mathlib
+
+theorem positive_solutions_sqrt_eq (x : ℝ) (hx : 0 < x) :
+    Real.sqrt (2 * (x - 3) ^ 2 + 4) = Real.sqrt (12 / x) ↔ x = 1 ∨ x = 2 ∨ x = 3 := by
+  sorry
+```
