@@ -277,3 +277,13 @@ theorem positive_solutions_sqrt_eq (x : ℝ) (hx : 0 < x) :
     Real.sqrt (2 * (x - 3) ^ 2 + 4) = Real.sqrt (12 / x) ↔ x = 1 ∨ x = 2 ∨ x = 3 := by
   sorry
 ```
+
+## 26. Prove that if $x$ and $y$ are distinct prime numbers, then $gcd(x^{y - 1} + y^{x - 1}, x \cdot y) = 1$
+
+```lean4
+import Mathlib
+
+theorem gcd_prime_pow_sum_eq_one (x y : ℕ) (hx : Nat.Prime x) (hy : Nat.Prime y) (hne : x ≠ y) :
+    Nat.gcd (x ^ (y - 1) + y ^ (x - 1)) (x * y) = 1 := by
+  sorry
+```
