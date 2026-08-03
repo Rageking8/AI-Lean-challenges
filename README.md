@@ -287,3 +287,13 @@ theorem gcd_prime_pow_sum_eq_one (x y : ℕ) (hx : Nat.Prime x) (hy : Nat.Prime 
     Nat.gcd (x ^ (y - 1) + y ^ (x - 1)) (x * y) = 1 := by
   sorry
 ```
+
+## 27. Prove that there is no natural number $n$ such that $29^n + 13n^4 + 5n^3 \equiv 5 \pmod{65}$
+
+```lean4
+import Mathlib
+
+theorem no_nat_satisfies_congruence :
+    ¬ ∃ n : ℕ, (29 ^ n + 13 * n ^ 4 + 5 * n ^ 3) % 65 = 5 := by
+  sorry
+```
