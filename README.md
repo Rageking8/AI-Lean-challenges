@@ -297,3 +297,14 @@ theorem no_nat_satisfies_congruence :
     ¬ ∃ n : ℕ, (29 ^ n + 13 * n ^ 4 + 5 * n ^ 3) % 65 = 5 := by
   sorry
 ```
+
+## 28. Prove that the only non-negative real solution to $\displaystyle\sqrt[3]{19\sqrt{2x + 1} + 34\sqrt{x}} = \sqrt{2x + 1} + \sqrt{x}$ is $x = 4$
+
+```lean4
+import Mathlib
+
+theorem unique_real_solution_nested_radical (x : ℝ) (hx : 0 ≤ x) :
+    (19 * Real.sqrt (2 * x + 1) + 34 * Real.sqrt x) ^ (1 / 3 : ℝ) =
+      Real.sqrt (2 * x + 1) + Real.sqrt x ↔ x = 4 := by
+  sorry
+```
