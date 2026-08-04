@@ -5,6 +5,10 @@ Date: `2 August 2026`\
 Line count: `158`\
 Turn count: `2`
 
+## Note
+
+The conversation contained 1 "Continue" message not included in the turn count.
+
 ## Solution
 
 ```lean4
