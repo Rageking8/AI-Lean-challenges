@@ -319,3 +319,15 @@ theorem sum_n_arctan_eq_pi :
       (4 * (n : ℝ) ^ 4 + 8 * (n : ℝ) ^ 3 + 4 * (n : ℝ) ^ 2 + 1))) = Real.pi := by
   sorry
 ```
+
+## 30. Let $S(n)$ be the base-10 digit sum of $n$. Prove that the only positive odd integer solution to $x \cdot S(x) + y \cdot S(y) + z \cdot S(z) = xyz$ is $x = y = z = 3$
+
+```lean4
+import Mathlib
+
+theorem odd_digit_sum_eq_xyz_iff (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z)
+    (hxo : Odd x) (hyo : Odd y) (hzo : Odd z) :
+      x * (Nat.digits 10 x).sum + y * (Nat.digits 10 y).sum + z * (Nat.digits 10 z).sum = x * y * z ↔
+      x = 3 ∧ y = 3 ∧ z = 3 := by
+  sorry
+```
