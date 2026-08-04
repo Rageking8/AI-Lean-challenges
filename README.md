@@ -308,3 +308,14 @@ theorem unique_real_solution_nested_radical (x : ℝ) (hx : 0 ≤ x) :
       Real.sqrt (2 * x + 1) + Real.sqrt x ↔ x = 4 := by
   sorry
 ```
+
+## 29. Prove that $\displaystyle\sum_{n = -\infty}^{\infty} n \cdot arctan\left(\frac{4n + 2}{4n^4 + 8n^3 + 4n^2 + 1}\right) = \pi$
+
+```lean4
+import Mathlib
+
+theorem sum_n_arctan_eq_pi :
+    tsum (fun (n : ℤ) => (n : ℝ) * Real.arctan ((4 * (n : ℝ) + 2) /
+      (4 * (n : ℝ) ^ 4 + 8 * (n : ℝ) ^ 3 + 4 * (n : ℝ) ^ 2 + 1))) = Real.pi := by
+  sorry
+```
