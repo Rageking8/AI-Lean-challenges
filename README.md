@@ -350,3 +350,12 @@ import Mathlib
 theorem quartic_pos_x4_4x3 (x : ℝ) : x ^ 4 - 4 * x ^ 3 + (63 / 8 : ℝ) * x ^ 2 - 12 * x + 9 > 0 := by
   sorry
 ```
+
+## 33. Prove that for all real number $x$, $2x^4 + 5x^3 + 6x^2 + 11x + 10 \gt 0$
+
+```lean4
+import Mathlib
+
+theorem quartic_pos_2x4_5x3 (x : ℝ) : 2 * x ^ 4 + 5 * x ^ 3 + 6 * x ^ 2 + 11 * x + 10 > 0 := by
+  sorry
+```
