@@ -369,3 +369,13 @@ theorem polynomial_pos_3x8_2x4 (x y : ℝ) :
     3 * x ^ 8 + 2 * x ^ 4 * y ^ 4 - 7 * x ^ 2 * y ^ 2 + 2 * y ^ 6 + 5 / 3 > 0 := by
   sorry
 ```
+
+## 35. Let $L(n)$ be the base-10 digit length of $n$. Prove that the only positive integer solution to $n \cdot L(n) \le L(n!)$ is $n = 1$
+
+```lean4
+import Mathlib
+
+theorem unique_pos_int_digit_length_ineq (n : ℕ) (hn : 0 < n) :
+    n * (Nat.digits 10 n).length ≤ (Nat.digits 10 n.factorial).length ↔ n = 1 := by
+  sorry
+```
