@@ -331,3 +331,13 @@ theorem odd_digit_sum_eq_xyz_iff (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0
       x = 3 ∧ y = 3 ∧ z = 3 := by
   sorry
 ```
+
+## 31. Prove that for all positive integers $x$, $y$, $z$, $\lvert((x \bmod y) \bmod z) - (x \bmod z)\rvert \le z - gcd(y, z)$
+
+```lean4
+import Mathlib
+
+theorem abs_mod_mod_sub_mod_le (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z) :
+    |((x % y % z : ℤ) - (x % z : ℤ))| ≤ (z : ℤ) - Nat.gcd y z := by
+  sorry
+```
