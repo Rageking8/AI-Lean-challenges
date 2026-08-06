@@ -3,3 +3,31 @@
 Possibly unsound problems that have not been solved.
 
 ## Problems
+
+```lean4
+import Mathlib
+
+noncomputable def P (n : ℕ) : ℕ := sInf { p : ℕ | Nat.Prime p ∧ n < p }
+
+theorem next_prime_quadratic_eq_iff_two (n : ℕ) (hn : 0 < n) :
+    (P n : ℝ) = ((n : ℝ) ^ 2 - (n : ℝ) + 1) / ((P n : ℝ) - (n : ℝ)) ↔ n = 2 := by
+  sorry
+```
+
+```lean4
+import Mathlib
+
+theorem digit_sum_prod_finitely_many_solutions :
+    Set.Finite { n : ℕ | 0 < n ∧ ((Nat.digits 10 n).sum) ^ 2 + 8 = (Nat.digits 10 n).prod } := by
+  sorry
+```
+
+```lean4
+import Mathlib
+
+theorem binom_equation_unique_solution (a b c d : ℕ)
+    (ha : 0 < a) (hb : 0 < b) (hc : 0 < c) (hd : 0 < d) :
+      (2 * a + 1) ^ (b + 2) - 1 = 2 ^ c * Nat.choose d (2 * a + 2) ↔
+      a = 1 ∧ b = 2 ∧ c = 4 ∧ d = 5 := by
+  sorry
+```
