@@ -31,3 +31,15 @@ theorem binom_equation_unique_solution (a b c d : ℕ)
       a = 1 ∧ b = 2 ∧ c = 4 ∧ d = 5 := by
   sorry
 ```
+
+```lean4
+import Mathlib
+
+def P (x : ℝ) : ℝ := x^2 + x + 1
+
+theorem floor_p_pow_r_odd_even_iff (r : ℝ) :
+    ({n : ℕ | 0 < n ∧ Even ⌊(P (n : ℝ)) ^ r⌋}.Infinite ∧
+      {n : ℕ | 0 < n ∧ Odd ⌊(P (n : ℝ)) ^ r⌋}.Infinite) ↔
+      (0 < r ∧ ¬ ∃ k : ℤ, r = (k : ℝ)) := by
+  sorry
+```
