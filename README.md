@@ -341,3 +341,12 @@ theorem abs_mod_mod_sub_mod_le (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 <
     |((x % y % z : ℤ) - (x % z : ℤ))| ≤ (z : ℤ) - Nat.gcd y z := by
   sorry
 ```
+
+## 32. Prove that for all real number $x$, $x^4 - 4x^3 + \frac{63}{8}x^2 - 12x + 9 \gt 0$
+
+```lean4
+import Mathlib
+
+theorem quartic_pos_x4_4x3 (x : ℝ) : x ^ 4 - 4 * x ^ 3 + (63 / 8 : ℝ) * x ^ 2 - 12 * x + 9 > 0 := by
+  sorry
+```
