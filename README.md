@@ -359,3 +359,13 @@ import Mathlib
 theorem quartic_pos_2x4_5x3 (x : ℝ) : 2 * x ^ 4 + 5 * x ^ 3 + 6 * x ^ 2 + 11 * x + 10 > 0 := by
   sorry
 ```
+
+## 34. Prove that for all real numbers $x$ and $y$, $3x^8 + 2x^4y^4 - 7x^2y^2 + 2y^6 + \frac{5}{3} \gt 0$
+
+```lean4
+import Mathlib
+
+theorem polynomial_pos_3x8_2x4 (x y : ℝ) :
+    3 * x ^ 8 + 2 * x ^ 4 * y ^ 4 - 7 * x ^ 2 * y ^ 2 + 2 * y ^ 6 + 5 / 3 > 0 := by
+  sorry
+```
