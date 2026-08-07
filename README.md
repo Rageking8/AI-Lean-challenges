@@ -389,3 +389,13 @@ theorem no_real_solution_nested_radical (x : ℝ) (hx : 0 ≤ x) :
     Real.sqrt (x ^ 2 + x + 1 + 2 * Real.sqrt (x ^ 3 + x ^ 2)) ≠ x + 1 / (x + 2) := by
   sorry
 ```
+
+## 37. Prove that the only real number solution to $min(x^3 - 2x^2 + 3, x^2 - 1) = max(3^x - 6, 7 - 2^x)$ is $x = 2$
+
+```lean4
+import Mathlib
+
+theorem min_poly_eq_max_exp_iff_eq_two (x : ℝ) :
+    min (x ^ 3 - 2 * x ^ 2 + 3) (x ^ 2 - 1) = max ((3 : ℝ) ^ x - 6) (7 - (2 : ℝ) ^ x) ↔ x = 2 := by
+  sorry
+```
