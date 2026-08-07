@@ -379,3 +379,13 @@ theorem unique_pos_int_digit_length_ineq (n : ℕ) (hn : 0 < n) :
     n * (Nat.digits 10 n).length ≤ (Nat.digits 10 n.factorial).length ↔ n = 1 := by
   sorry
 ```
+
+## 36. Prove that there is no non-negative real number $x$ such that $\sqrt{x^2 + x + 1 + 2\sqrt{x^3 + x^2}} = x + \frac{1}{x + 2}$
+
+```lean4
+import Mathlib
+
+theorem no_real_solution_nested_radical (x : ℝ) (hx : 0 ≤ x) :
+    Real.sqrt (x ^ 2 + x + 1 + 2 * Real.sqrt (x ^ 3 + x ^ 2)) ≠ x + 1 / (x + 2) := by
+  sorry
+```
