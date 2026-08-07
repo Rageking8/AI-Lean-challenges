@@ -410,3 +410,13 @@ theorem min_abs_diff_le_two (a b c d e : ℝ)
       (min |a - b| (min |b - c| (min |c - d| (min |d - e| |e - a|)))) ≤ 2 := by
   sorry
 ```
+
+## 39. Prove that there are infinitely many positive integer solutions $n$ to $tan(n\pi x) = 0$ if and only if $x$ is a rational number
+
+```lean4
+import Mathlib
+
+theorem infinite_tan_zero_iff_rat (x : ℝ) :
+    Set.Infinite { n : ℕ | n > 0 ∧ Real.tan ((n : ℝ) * Real.pi * x) = 0 } ↔ ∃ q : ℚ, x = q := by
+  sorry
+```
