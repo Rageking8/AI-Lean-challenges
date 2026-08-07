@@ -399,3 +399,14 @@ theorem min_poly_eq_max_exp_iff_eq_two (x : ℝ) :
     min (x ^ 3 - 2 * x ^ 2 + 3) (x ^ 2 - 1) = max ((3 : ℝ) ^ x - 6) (7 - (2 : ℝ) ^ x) ↔ x = 2 := by
   sorry
 ```
+
+## 38. Prove that if $a$, $b$, $c$, $d$, and $e$ are real numbers that sum to $0$ and the sum of their squares is $10$, then $min(|a - b|, |b - c|, |c - d|, |d - e|, |e - a|) \le 2$
+
+```lean4
+import Mathlib
+
+theorem min_abs_diff_le_two (a b c d e : ℝ)
+    (h_sum : a + b + c + d + e = 0) (h_sq : a ^ 2 + b ^ 2 + c ^ 2 + d ^ 2 + e ^ 2 = 10) :
+      (min |a - b| (min |b - c| (min |c - d| (min |d - e| |e - a|)))) ≤ 2 := by
+  sorry
+```
