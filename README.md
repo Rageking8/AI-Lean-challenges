@@ -420,3 +420,13 @@ theorem infinite_tan_zero_iff_rat (x : ℝ) :
     Set.Infinite { n : ℕ | n > 0 ∧ Real.tan ((n : ℝ) * Real.pi * x) = 0 } ↔ ∃ q : ℚ, x = q := by
   sorry
 ```
+
+## 40. Prove that for all real numbers $x$, $y$, $z$, $2^x(y^2 + 1) + 2^{-x}(z^2 + 1) + 2(y \cos x + z \sin x) \gt 0$
+
+```lean4
+import Mathlib
+
+theorem two_rpow_sq_add_cos_sin_pos (x y z : ℝ) :
+    (2 : ℝ) ^ x * (y ^ 2 + 1) + (2 : ℝ) ^ (-x) * (z ^ 2 + 1) + 2 * (y * Real.cos x + z * Real.sin x) > 0 := by
+  sorry
+```
