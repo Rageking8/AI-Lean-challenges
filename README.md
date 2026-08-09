@@ -451,3 +451,13 @@ theorem im_div_re_is_integer (n : ℕ) (hn : 0 < n) :
     ∃ k : ℤ, (((2 : ℂ) + Complex.I) ^ (2 * n)).im / (((1 : ℂ) + 2 * Complex.I) ^ n).re = (k : ℝ) := by
   sorry
 ```
+
+## 43. Prove that $cos(100\pi x^2) = 2.01x^2 - 1$ has exactly $198$ unique real solutions
+
+```lean4
+import Mathlib
+
+theorem cos_eq_solutions_count :
+    Set.ncard { x : ℝ | Real.cos (100 * Real.pi * x ^ 2) = 2.01 * x ^ 2 - 1 } = 198 := by
+  sorry
+```
