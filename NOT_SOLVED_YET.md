@@ -51,3 +51,12 @@ theorem digit_product_sq_eq_div (n : ℕ) (hn : 0 < n) :
     ((Nat.digits 10 n).prod) ^ 2 = Nat.floor ((n : ℝ) / 11) ↔ n = 10 ∨ n = 11 := by
   sorry
 ```
+
+```lean4
+import Mathlib
+
+theorem no_prime_solution_xy_2 (x y z : ℕ)
+    (hx : Nat.Prime x) (hy : Nat.Prime y) (hz : Nat.Prime z) :
+      x ^ y + 2 ≠ 2 ^ z + y ^ x := by
+  sorry
+```
