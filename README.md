@@ -430,3 +430,14 @@ theorem two_rpow_sq_add_cos_sin_pos (x y z : ℝ) :
     (2 : ℝ) ^ x * (y ^ 2 + 1) + (2 : ℝ) ^ (-x) * (z ^ 2 + 1) + 2 * (y * Real.cos x + z * Real.sin x) > 0 := by
   sorry
 ```
+
+## 41. Prove that there are no positive integers $x$ and $y$ such that $x! + y! = (x + y + 1)^3 \cdot gcd(x!, y!)$
+
+```lean4
+import Mathlib
+
+theorem no_pos_integers_factorial_eq :
+    ¬ ∃ (x y : ℕ), 0 < x ∧ 0 < y ∧
+      x.factorial + y.factorial = (x + y + 1) ^ 3 * Nat.gcd x.factorial y.factorial := by
+  sorry
+```
