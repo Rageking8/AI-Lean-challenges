@@ -441,3 +441,13 @@ theorem no_pos_integers_factorial_eq :
       x.factorial + y.factorial = (x + y + 1) ^ 3 * Nat.gcd x.factorial y.factorial := by
   sorry
 ```
+
+## 42. Prove that for all positive integer $n$, $\frac{Im((2 + i)^{2n})}{Re((1 + 2i)^n)}$ is an integer
+
+```lean4
+import Mathlib
+
+theorem im_div_re_is_integer (n : ℕ) (hn : 0 < n) :
+    ∃ k : ℤ, (((2 : ℂ) + Complex.I) ^ (2 * n)).im / (((1 : ℂ) + 2 * Complex.I) ^ n).re = (k : ℝ) := by
+  sorry
+```
