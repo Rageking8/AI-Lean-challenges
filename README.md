@@ -461,3 +461,13 @@ theorem cos_eq_solutions_count :
     Set.ncard { x : ℝ | Real.cos (100 * Real.pi * x ^ 2) = 2.01 * x ^ 2 - 1 } = 198 := by
   sorry
 ```
+
+## 44. Prove that the only positive real numbers $x$ and $y$ satisfying both $x^{y^x} = y$ and $y^{x^y} = x$ are $x = y = 1$
+
+```lean4
+import Mathlib
+
+theorem pos_reals_pow_eq_one (x y : ℝ) (hx : 0 < x) (hy : 0 < y) :
+    x ^ (y ^ x) = y ∧ y ^ (x ^ y) = x ↔ x = 1 ∧ y = 1 := by
+  sorry
+```
