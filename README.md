@@ -471,3 +471,15 @@ theorem pos_reals_pow_eq_one (x y : ℝ) (hx : 0 < x) (hy : 0 < y) :
     x ^ (y ^ x) = y ∧ y ^ (x ^ y) = x ↔ x = 1 ∧ y = 1 := by
   sorry
 ```
+
+## 45. Let $S(n)$ be the base-10 digit sum of $n$. Prove that $\displaystyle\int_{1}^{\infty} \frac{S(\lfloor x^2 \rfloor)}{x^5} \\, dx = \frac{5\pi^2}{132}$
+
+```lean4
+import Mathlib
+
+open Real MeasureTheory
+
+theorem integral_digit_sum_floor_sq :
+    ∫ x in Set.Ici (1 : ℝ), ((Nat.digits 10 (Nat.floor (x ^ 2))).sum : ℝ) / x ^ 5 = (5 * π ^ 2) / 132 := by
+  sorry
+```
