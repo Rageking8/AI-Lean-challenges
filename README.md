@@ -483,3 +483,15 @@ theorem integral_digit_sum_floor_sq :
     ∫ x in Set.Ici (1 : ℝ), ((Nat.digits 10 (Nat.floor (x ^ 2))).sum : ℝ) / x ^ 5 = (5 * π ^ 2) / 132 := by
   sorry
 ```
+
+## 46. Let $S(n)$ be the base-10 digit sum of $n$. Prove that if $x$, $y$, $z$ are positive integers such that $xyz = 10^k$ for some integer $k \ge 1$, and at least one of $x$, $y$, $z$ is not a power of $10$, then $S(x) + S(y) + S(z) \ge 8$
+
+```lean4
+import Mathlib
+
+theorem digit_sum_xyz_bounds (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z)
+    (h_prod : ∃ k : ℕ, 1 ≤ k ∧ x * y * z = 10 ^ k)
+      (h_not_pow : (¬ ∃ a : ℕ, x = 10 ^ a) ∨ (¬ ∃ b : ℕ, y = 10 ^ b) ∨ (¬ ∃ c : ℕ, z = 10 ^ c)) :
+      (Nat.digits 10 x).sum + (Nat.digits 10 y).sum + (Nat.digits 10 z).sum ≥ 8 := by
+  sorry
+```
