@@ -495,3 +495,14 @@ theorem digit_sum_xyz_bounds (x y z : ℕ) (hx : 0 < x) (hy : 0 < y) (hz : 0 < z
       (Nat.digits 10 x).sum + (Nat.digits 10 y).sum + (Nat.digits 10 z).sum ≥ 8 := by
   sorry
 ```
+
+## 47. Prove that if $x$ and $y$ are positive integers such that $\displaystyle\sum_{n = 0}^{\infty} \frac{n}{2^n} \cdot \left\lfloor\frac{ny}{x}\right\rfloor = \frac{6y}{x}$, then $x \mid y$
+
+```lean4
+import Mathlib
+
+theorem sum_floor_div_eq_implies_dvd (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
+    (h : ∑' (n : ℕ), ((n : ℝ) / (2 : ℝ) ^ n) * (Int.floor ((n : ℝ) * (y : ℝ) / (x : ℝ)) : ℝ) = 6 * (y : ℝ) / (x : ℝ)) :
+      x ∣ y := by
+  sorry
+```
