@@ -518,3 +518,14 @@ theorem odd_of_prime_quadratic_and_quintic (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
       Odd x ∧ Odd y := by
   sorry
 ```
+
+## 49. Prove that if $x$ and $y$ are positive integers such that $2x^2 + xy + y^2 = 7(x - y)^4$, then neither $x$ nor $y$ is prime
+
+```lean4
+import Mathlib
+
+theorem neither_x_nor_y_prime (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
+    (h : 2 * (x : ℤ) ^ 2 + (x : ℤ) * (y : ℤ) + (y : ℤ) ^ 2 = 7 * ((x : ℤ) - (y : ℤ)) ^ 4) :
+      ¬ Nat.Prime x ∧ ¬ Nat.Prime y := by
+  sorry
+```
