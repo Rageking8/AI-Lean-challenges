@@ -543,3 +543,13 @@ theorem primitive_set_arbitrarily_large :
       S.card ≥ n := by
   sorry
 ```
+
+## 51. Prove that there are no positive integers $x$ and $y$ such that $x^2 + 4xy + 2y^2 \equiv 5 \cdot 2^x \pmod{2^{2x + 3}}$
+
+```lean4
+import Mathlib
+
+theorem not_exists_pos_sol_quad_modeq_pow :
+    ¬ ∃ (x y : ℕ), 0 < x ∧ 0 < y ∧ (x ^ 2 + 4 * x * y + 2 * y ^ 2 ≡ 5 * 2 ^ x [MOD 2 ^ (2 * x + 3)]) := by
+  sorry
+```
