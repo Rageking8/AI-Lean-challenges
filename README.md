@@ -529,3 +529,17 @@ theorem neither_x_nor_y_prime (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
       ¬ Nat.Prime x ∧ ¬ Nat.Prime y := by
   sorry
 ```
+
+## 50. Prove that there exists a primitive set $S$ of arbitrarily large cardinality such that $\vert S_{odd} \vert = \vert S_{even} \vert$ and $\displaystyle\sum_{o \in S_{odd}} o = \sum_{e \in S_{even}} e$
+
+```lean4
+import Mathlib
+
+theorem primitive_set_arbitrarily_large :
+    ∀ n : ℕ, ∃ S : Finset ℕ, S.Nonempty ∧
+      (∀ a ∈ S, ∀ b ∈ S, a ∣ b → a = b) ∧
+      (S.filter Odd).card = (S.filter Even).card ∧
+      (S.filter Odd).sum id = (S.filter Even).sum id ∧
+      S.card ≥ n := by
+  sorry
+```
