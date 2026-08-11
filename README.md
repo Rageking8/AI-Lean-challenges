@@ -506,3 +506,15 @@ theorem sum_floor_div_eq_implies_dvd (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
       x ∣ y := by
   sorry
 ```
+
+## 48. Prove that if $x$ and $y$ are positive integers such that $x^2 + 3y^2 - 17$ and $\frac{x^5 + y^5}{x + y}$ are prime, then both $x$ and $y$ must be odd
+
+```lean4
+import Mathlib
+
+theorem odd_of_prime_quadratic_and_quintic (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
+    (h1 : Nat.Prime (x ^ 2 + 3 * y ^ 2 - 17))
+      (h2 : Nat.Prime ((x ^ 5 + y ^ 5) / (x + y))) :
+      Odd x ∧ Odd y := by
+  sorry
+```
