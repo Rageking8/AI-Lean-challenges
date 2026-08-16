@@ -568,3 +568,13 @@ theorem permutations_a_b_log_eq_unique_sol_count :
       Real.log (x ^ 3 + (a : ℝ)) = Real.log (x ^ b - 3 * (a : ℝ)) } = 1011 := by
   sorry
 ```
+
+## 53. Prove that the equation $x^{20} - 7x^{11} + 10x^{10} - 5x + 4 = 0$ has no real solutions
+
+```lean4
+import Mathlib
+
+theorem no_real_solutions_x20_7x11 (x : ℝ) :
+    x ^ 20 - 7 * x ^ 11 + 10 * x ^ 10 - 5 * x + 4 ≠ 0 := by
+  sorry
+```
