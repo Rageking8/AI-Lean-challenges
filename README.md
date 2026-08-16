@@ -578,3 +578,13 @@ theorem no_real_solutions_x20_7x11 (x : ℝ) :
     x ^ 20 - 7 * x ^ 11 + 10 * x ^ 10 - 5 * x + 4 ≠ 0 := by
   sorry
 ```
+
+## 54. Prove that the equation $x^{10}y^2 + x^2y^8 + x^6 + y^6 - 3x^4y^3 - 2x^2y + 3 = 0$ has no real solutions
+
+```lean4
+import Mathlib
+
+theorem no_real_solutions_x10y2_x2y8 (x y : ℝ) :
+    x ^ 10 * y ^ 2 + x ^ 2 * y ^ 8 + x ^ 6 + y ^ 6 - 3 * x ^ 4 * y ^ 3 - 2 * x ^ 2 * y + 3 ≠ 0 := by
+  sorry
+```
