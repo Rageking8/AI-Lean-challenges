@@ -60,3 +60,11 @@ theorem no_prime_solution_xy_2 (x y z : ℕ)
       x ^ y + 2 ≠ 2 ^ z + y ^ x := by
   sorry
 ```
+
+```lean4
+import Mathlib
+
+theorem cube_add_one_dvd_unique_solution (x : ℕ) (hx : 0 < x) :
+    x ^ 3 + 1 ∣ Nat.factorial x + 2 ^ (x ^ x) ↔ x = 2 := by
+  sorry
+```
