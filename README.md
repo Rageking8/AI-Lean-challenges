@@ -553,3 +553,18 @@ theorem not_exists_pos_sol_quad_modeq_pow :
     ¬ ∃ (x y : ℕ), 0 < x ∧ 0 < y ∧ (x ^ 2 + 4 * x * y + 2 * y ^ 2 ≡ 5 * 2 ^ x [MOD 2 ^ (2 * x + 3)]) := by
   sorry
 ```
+
+## 52. Let $a$ and $b$ be positive integers such that $a + b = 2026$. Prove that there are exactly $1011$ permutations $(a, b)$ for which the equation $\ln(x^3 + a) = \ln(x^b - 3a)$ has a unique real solution $x$
+
+```lean4
+import Mathlib
+
+theorem permutations_a_b_log_eq_unique_sol_count :
+    Nat.card { p : ℕ × ℕ |
+      let a := p.1
+      let b := p.2
+      0 < a ∧ 0 < b ∧ a + b = 2026 ∧
+      ∃! x : ℝ, 0 < x ^ 3 + (a : ℝ) ∧ 0 < x ^ b - 3 * (a : ℝ) ∧
+      Real.log (x ^ 3 + (a : ℝ)) = Real.log (x ^ b - 3 * (a : ℝ)) } = 1011 := by
+  sorry
+```
