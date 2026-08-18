@@ -588,3 +588,14 @@ theorem no_real_solutions_x10y2_x2y8 (x y : ℝ) :
     x ^ 10 * y ^ 2 + x ^ 2 * y ^ 8 + x ^ 6 + y ^ 6 - 3 * x ^ 4 * y ^ 3 - 2 * x ^ 2 * y + 3 ≠ 0 := by
   sorry
 ```
+
+## 55. Prove that for all real numbers $x$ and $y$, $sgn(x + y) + sgn(x - y) = sgn(\sin(x) + x) \cdot (1 + sgn(x^4 - y^4))$
+
+```lean4
+import Mathlib
+
+theorem sgn_add_sub_eq (x y : ℝ) :
+    Real.sign (x + y) + Real.sign (x - y) =
+      Real.sign (Real.sin x + x) * (1 + Real.sign (x ^ 4 - y ^ 4)) := by
+  sorry
+```
