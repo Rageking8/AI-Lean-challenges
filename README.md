@@ -599,3 +599,14 @@ theorem sgn_add_sub_eq (x y : ℝ) :
       Real.sign (Real.sin x + x) * (1 + Real.sign (x ^ 4 - y ^ 4)) := by
   sorry
 ```
+
+## 56. Let $S(n)$ be the base-10 digit sum of $n$. Prove that if $n$ is a positive integer such that $n^2 + S(n)^2 \mid n^4 + S(n)^4$, then $S(n) \mid n$
+
+```lean4
+import Mathlib
+
+theorem digit_sum_divides (n : ℕ) (hn : 0 < n)
+    (h : n ^ 2 + (Nat.digits 10 n).sum ^ 2 ∣ n ^ 4 + (Nat.digits 10 n).sum ^ 4) :
+      (Nat.digits 10 n).sum ∣ n := by
+  sorry
+```
