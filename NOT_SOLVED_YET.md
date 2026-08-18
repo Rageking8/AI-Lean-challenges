@@ -48,7 +48,8 @@ theorem floor_p_pow_r_odd_even_iff (r : ℝ) :
 import Mathlib
 
 theorem digit_product_sq_eq_div (n : ℕ) (hn : 0 < n) :
-    ((Nat.digits 10 n).prod) ^ 2 = Nat.floor ((n : ℝ) / 11) ↔ n = 10 ∨ n = 11 := by
+    ((Nat.digits 10 n).prod) ^ 2 = Nat.floor ((n : ℝ) / 11) ↔
+      n = 10 ∨ n = 11 ∨ n = 383113691144 := by
   sorry
 ```
 
