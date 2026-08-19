@@ -610,3 +610,14 @@ theorem digit_sum_divides (n : ℕ) (hn : 0 < n)
       (Nat.digits 10 n).sum ∣ n := by
   sorry
 ```
+
+## 57. Let $f(x) = \lvert\lvert x \rvert - 3 \rvert + \lvert x \rvert$. Prove that the only real solution to equation $f^{2026}(x) = 3 - x^2$ is $x = 0$
+
+```lean4
+import Mathlib
+
+theorem unique_solution_f_iterate (x : ℝ) :
+    let f : ℝ → ℝ := fun x => |abs x - 3| + |x|
+      f^[2026] x = 3 - x ^ 2 ↔ x = 0 := by
+  sorry
+```
