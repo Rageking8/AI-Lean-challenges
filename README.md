@@ -616,8 +616,9 @@ theorem digit_sum_divides (n : ℕ) (hn : 0 < n)
 ```lean4
 import Mathlib
 
+def f (x : ℝ) : ℝ := |abs x - 3| + |x|
+
 theorem unique_solution_f_iterate (x : ℝ) :
-    let f : ℝ → ℝ := fun x => |abs x - 3| + |x|
-      f^[2026] x = 3 - x ^ 2 ↔ x = 0 := by
+    f^[2026] x = 3 - x ^ 2 ↔ x = 0 := by
   sorry
 ```
