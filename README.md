@@ -622,3 +622,17 @@ theorem unique_solution_f_iterate (x : ℝ) :
     f^[2026] x = 3 - x ^ 2 ↔ x = 0 := by
   sorry
 ```
+
+## 58. Let $L(n)$ be the base-10 digit length of $n$. Prove that there is no integer $n \gt 1$ such that $\displaystyle\frac{1}{n} \sum_{k = 1}^{n} L(k) = L(n) - \frac{1}{\sqrt[4]{n} - 1}$
+
+```lean4
+import Mathlib
+
+open BigOperators
+
+theorem no_pos_int_satisfies_digit_sum_eq :
+    ¬ ∃ (n : ℕ), 1 < n ∧
+      (1 / (n : ℝ)) * (∑ k ∈ Finset.Icc 1 n, ((Nat.digits 10 k).length : ℝ)) =
+      ((Nat.digits 10 n).length : ℝ) - 1 / ((n : ℝ) ^ (1 / 4 : ℝ) - 1) := by
+  sorry
+```
