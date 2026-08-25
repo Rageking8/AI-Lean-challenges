@@ -636,3 +636,13 @@ theorem no_pos_int_satisfies_digit_sum_eq :
       ((Nat.digits 10 n).length : ℝ) - 1 / ((n : ℝ) ^ (1 / 4 : ℝ) - 1) := by
   sorry
 ```
+
+## 59. Prove that the only positive integer satisfying $3^n \mid 2^{3^{4^n}} - 11$ is $n = 1$
+
+```lean4
+import Mathlib
+
+theorem unique_solution_pow_tower_div (n : ℕ) (hn : 0 < n) :
+    3 ^ n ∣ 2 ^ (3 ^ (4 ^ n)) - 11 ↔ n = 1 := by
+  sorry
+```
