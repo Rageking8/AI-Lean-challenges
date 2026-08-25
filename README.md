@@ -646,3 +646,14 @@ theorem unique_solution_pow_tower_div (n : ℕ) (hn : 0 < n) :
     3 ^ n ∣ 2 ^ (3 ^ (4 ^ n)) - 11 ↔ n = 1 := by
   sorry
 ```
+
+## 60. Prove that the only positive integer solutions to $\frac{(n!)!}{(n^2 - 1)!} \lt n^{n! + n^3}$ are $n = 2$, $3$, and $4$
+
+```lean4
+import Mathlib
+
+theorem factorial_inequality (n : ℕ) (hn : 0 < n) :
+    ((n.factorial.factorial : ℝ) / ((n ^ 2 - 1).factorial : ℝ) < (n : ℝ) ^ (n.factorial + n ^ 3)) ↔
+      n = 2 ∨ n = 3 ∨ n = 4 := by
+  sorry
+```
