@@ -668,3 +668,14 @@ theorem fractional_part_equation_two_solutions :
       Int.fract (x * Int.fract (2 / x)))) + x ^ 3 = 0 } = 2 := by
   sorry
 ```
+
+## 62. Let $P(n)$ be the base-10 digit product of $n$. Prove that there is no positive integer $n$ such that $\frac{P(n + 3)}{P(n + 5) - 6} = n^2$
+
+```lean4
+import Mathlib
+
+theorem no_pos_int_digit_prod_eq :
+    ¬ ∃ n : ℕ, 0 < n ∧ ((Nat.digits 10 (n + 3)).prod : ℝ) /
+      (((Nat.digits 10 (n + 5)).prod : ℝ) - 6) = (n : ℝ) ^ 2 := by
+  sorry
+```
