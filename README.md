@@ -657,3 +657,14 @@ theorem factorial_inequality (n : ℕ) (hn : 0 < n) :
       n = 2 ∨ n = 3 ∨ n = 4 := by
   sorry
 ```
+
+## 61. Let $\\{x\\}$ be the fractional part of $x$. Prove that there are exactly $2$ non-zero real solutions to $\left\\{x\left\\{\frac{1}{x}\left\\{x\left\\{\frac{2}{x}\right\\}\right\\}\right\\}\right\\} + x^3 = 0$
+
+```lean4
+import Mathlib
+
+theorem fractional_part_equation_two_solutions :
+    Set.ncard { x : ℝ | x ≠ 0 ∧ Int.fract (x * Int.fract ((1 / x) *
+      Int.fract (x * Int.fract (2 / x)))) + x ^ 3 = 0 } = 2 := by
+  sorry
+```
