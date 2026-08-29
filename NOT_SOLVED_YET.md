@@ -69,3 +69,14 @@ theorem cube_add_one_dvd_unique_solution (x : ℕ) (hx : 0 < x) :
     x ^ 3 + 1 ∣ Nat.factorial x + 2 ^ (x ^ x) ↔ x = 2 := by
   sorry
 ```
+
+```lean4
+import Mathlib
+
+theorem reciprocal_gcd_lcm_system_infinite_solutions :
+    Set.Infinite { (x, y, z, n) : ℕ × ℕ × ℕ × ℕ |
+      0 < x ∧ 0 < y ∧ 0 < z ∧ 0 < n ∧
+      (1 : ℚ) / x + (1 : ℚ) / y + (1 : ℚ) / z = (1 : ℚ) / (n + 7) ∧
+      x * y * z = (Nat.gcd (Nat.gcd x y) z) ^ 5 * Nat.lcm z n } := by
+  sorry
+```
