@@ -679,3 +679,16 @@ theorem no_pos_int_digit_prod_eq :
       (((Nat.digits 10 (n + 5)).prod : ℝ) - 6) = (n : ℝ) ^ 2 := by
   sorry
 ```
+
+## 63. Let $x$ and $y$ be distinct positive integers. Prove that $\frac{3x + \sqrt[3]{y^5}}{\sqrt[7]{x^2} - y^6}$ is rational if and only if $x$ is a perfect 7th power and $y$ is a perfect cube
+
+```lean4
+import Mathlib
+
+theorem rational_expr_iff_perfect_powers (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
+    (hxy : x ≠ y) (hne : (x : ℝ) ^ ((2 : ℝ) / 7) ≠ (y : ℝ) ^ 6) :
+      (∃ q : ℚ, (3 * (x : ℝ) + (y : ℝ) ^ ((5 : ℝ) / 3)) /
+      ((x : ℝ) ^ ((2 : ℝ) / 7) - (y : ℝ) ^ 6) = (q : ℝ)) ↔
+      (∃ a : ℕ, a ^ 7 = x) ∧ (∃ b : ℕ, b ^ 3 = y) := by
+  sorry
+```
