@@ -84,3 +84,15 @@ theorem reciprocal_gcd_lcm_system_infinite_solutions :
       x * y * z = (Nat.gcd (Nat.gcd x y) z) ^ 5 * Nat.lcm z n } := by
   sorry
 ```
+
+### Require theorems not in Mathlib
+
+Needs the Gelfond–Schneider theorem:
+
+```lean4
+import Mathlib
+
+theorem transcendental_sin_cbrt6_arcsin_sub_arccos :
+    Transcendental ℚ (Real.sin ((6 : ℝ) ^ (1 / 3 : ℝ) * Real.arcsin (1 / 3) - Real.arccos (2 / 7))) := by
+  sorry
+```
