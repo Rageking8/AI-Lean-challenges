@@ -4,6 +4,10 @@ Possibly unsound problems that have not been solved.
 
 ## Problems
 
+Below are the problems sorted into categories.
+
+### General
+
 ```lean4
 import Mathlib
 
