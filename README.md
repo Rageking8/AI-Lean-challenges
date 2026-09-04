@@ -692,3 +692,19 @@ theorem rational_expr_iff_perfect_powers (x y : ℕ) (hx : 0 < x) (hy : 0 < y)
       (∃ a : ℕ, a ^ 7 = x) ∧ (∃ b : ℕ, b ^ 3 = y) := by
   sorry
 ```
+
+## 64. Prove that there exist arbitrarily long sequences of consecutive natural numbers with the same additive persistence
+
+```lean4
+import Mathlib
+
+def additivePersistence (n : ℕ) : ℕ :=
+  if n < 10 then 0
+  else 1 + additivePersistence (Nat.digits 10 n).sum
+termination_by n
+decreasing_by sorry
+
+theorem arbitrary_consecutive_same_additive_persistence (k : ℕ) :
+    ∃ n : ℕ, ∀ i < k, additivePersistence (n + i) = additivePersistence n := by
+  sorry
+```
