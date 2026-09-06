@@ -718,3 +718,15 @@ theorem transcendental_sum_ceil_pi :
     Transcendental ℚ (∑' (n : ℕ+), (⌈3 * Real.pi * (n : ℝ)⌉ : ℝ) / ((5 : ℝ) ^ (n : ℕ).factorial - 1)) := by
   sorry
 ```
+
+## 66. Let $x$ and $y$ be real numbers such that $e \le x$, $e \le y$, and $y^x \le x^y$. Prove that $\left(\frac{x}{y}\right)^{(x - y)(\ln x - \ln y)} \le \frac{x^x + y^y}{x^y + y^x}$
+
+```lean4
+import Mathlib
+
+theorem rpow_sub_mul_log_sub_le_div_add_rpow (x y : ℝ)
+    (hx : Real.exp 1 ≤ x) (hy : Real.exp 1 ≤ y) (hxy : y ^ x ≤ x ^ y) :
+      (x / y) ^ ((x - y) * (Real.log x - Real.log y)) ≤
+      (x ^ x + y ^ y) / (x ^ y + y ^ x) := by
+  sorry
+```
