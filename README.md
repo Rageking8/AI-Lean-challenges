@@ -708,3 +708,13 @@ theorem arbitrary_consecutive_same_additive_persistence (k : ℕ) :
     ∃ n : ℕ, ∀ i < k, additivePersistence (n + i) = additivePersistence n := by
   sorry
 ```
+
+## 65. Prove that $\displaystyle\sum_{n = 1}^{\infty} \frac{\lceil 3 \pi n \rceil}{5^{n!} - 1}$ is transcendental
+
+```lean4
+import Mathlib
+
+theorem transcendental_sum_ceil_pi :
+    Transcendental ℚ (∑' (n : ℕ+), (⌈3 * Real.pi * (n : ℝ)⌉ : ℝ) / ((5 : ℝ) ^ (n : ℕ).factorial - 1)) := by
+  sorry
+```
