@@ -730,3 +730,17 @@ theorem rpow_sub_mul_log_sub_le_div_add_rpow (x y : ℝ)
       (x ^ x + y ^ y) / (x ^ y + y ^ x) := by
   sorry
 ```
+
+## 67. Prove that the last five digits of $^{951}7$ is $72343$
+
+```lean4
+import Mathlib
+
+def tetrate (a : ℕ) : ℕ → ℕ
+  | 0 => 1
+  | n + 1 => a ^ (tetrate a n)
+
+theorem last_five_digits_tetrate_seven_951 :
+    tetrate 7 951 % 100000 = 72343 := by
+  sorry
+```
