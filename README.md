@@ -744,3 +744,16 @@ theorem last_five_digits_tetrate_seven_951 :
     tetrate 7 951 % 100000 = 72343 := by
   sorry
 ```
+
+## 68. Let $S(n)$ denote the integer obtained by sorting the base-10 digits of $n$ in descending order. Prove that there are infinitely many positive integers $n$ such that $S(n) = 2n$
+
+```lean4
+import Mathlib
+
+def S (n : ℕ) : ℕ :=
+  Nat.ofDigits 10 ((Nat.digits 10 n).mergeSort (· ≤ ·))
+
+theorem infinite_solutions_s_eq_two_n :
+    Set.Infinite { n : ℕ | 0 < n ∧ S n = 2 * n } := by
+  sorry
+```
