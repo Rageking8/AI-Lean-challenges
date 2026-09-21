@@ -769,3 +769,15 @@ theorem no_int_sol_prime_factor_gcd :
       (P : ℤ) ^ 2 = (n : ℤ) - (Int.gcd (n : ℤ) ((P : ℤ) - 5) : ℤ) := by
   sorry
 ```
+
+## 70. Prove that $\displaystyle\int_{0}^{\pi} x \cdot sgn(\sin(3x)) \cdot sgn(\sin(11x^2)) \\, dx = \frac{5 \pi^2}{6} - \frac{29 \pi}{11}$
+
+```lean4
+import Mathlib
+
+theorem integral_sgn_sin :
+    ∫ x in (0)..Real.pi,
+      x * Real.sign (Real.sin (3 * x)) * Real.sign (Real.sin (11 * x ^ 2)) =
+      (5 * Real.pi ^ 2) / 6 - (29 * Real.pi) / 11 := by
+  sorry
+```
