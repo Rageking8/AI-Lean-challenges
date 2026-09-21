@@ -757,3 +757,15 @@ theorem infinite_solutions_s_eq_two_n :
     Set.Infinite { n : ℕ | 0 < n ∧ S n = 2 * n } := by
   sorry
 ```
+
+## 69. Prove that there does not exist an integer $n \gt 1$ whose largest prime factor $P$ satisfies $P^2 = n - gcd(n, P - 5)$
+
+```lean4
+import Mathlib
+
+theorem no_int_sol_prime_factor_gcd :
+    ¬ ∃ (n : ℕ) (P : ℕ), 1 < n ∧ Nat.Prime P ∧ P ∣ n ∧
+      (∀ q : ℕ, Nat.Prime q → q ∣ n → q ≤ P) ∧
+      (P : ℤ) ^ 2 = (n : ℤ) - (Int.gcd (n : ℤ) ((P : ℤ) - 5) : ℤ) := by
+  sorry
+```
