@@ -781,3 +781,17 @@ theorem integral_sgn_sin :
       (5 * Real.pi ^ 2) / 6 - (29 * Real.pi) / 11 := by
   sorry
 ```
+
+## 71. Let $R(n, d)$ be the base-10 repdigit with digit $d$ repeated $n$ times, and let $S(n)$ be the base-10 digit sum of $n$. Prove that $S((\sqrt{R(3334, 4) - R(1667, 8)} - 5)^3) = 24994$
+
+```lean4
+import Mathlib
+
+def R (n d : ℕ) : ℕ := d * ((10 ^ n - 1) / 9)
+
+def S (n : ℕ) : ℕ := (Nat.digits 10 n).sum
+
+theorem digit_sum_rep_digits_expr :
+    S ((Nat.sqrt (R 3334 4 - R 1667 8) - 5) ^ 3) = 24994 := by
+  sorry
+```
