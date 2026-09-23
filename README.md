@@ -795,3 +795,15 @@ theorem digit_sum_rep_digits_expr :
     S ((Nat.sqrt (R 3334 4 - R 1667 8) - 5) ^ 3) = 24994 := by
   sorry
 ```
+
+## 72. Let $R(n, d)$ be the base-10 repdigit with digit $d$ repeated $n$ times. Prove that the only positive integer solution to $R(n, 3)^2 - R(n, 2) = R(n, 7)$ is $n = 1$
+
+```lean4
+import Mathlib
+
+def R (n d : ℕ) : ℕ := d * ((10 ^ n - 1) / 9)
+
+theorem repdigit_unique_sol_n_one (n : ℕ) (hn : 0 < n) :
+    R n 3 ^ 2 - R n 2 = R n 7 ↔ n = 1 := by
+  sorry
+```
