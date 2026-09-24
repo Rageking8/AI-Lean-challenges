@@ -807,3 +807,17 @@ theorem repdigit_unique_sol_n_one (n : ℕ) (hn : 0 < n) :
     R n 3 ^ 2 - R n 2 = R n 7 ↔ n = 1 := by
   sorry
 ```
+
+## 73. Prove that for any positive integer $n$, the base-10 representation of $\displaystyle\prod_{k = 1}^{n} (^{k}10 - 1)$ does not contain the digit $2$
+
+```lean4
+import Mathlib
+
+def tetrate (a : ℕ) : ℕ → ℕ
+  | 0 => 1
+  | n + 1 => a ^ (tetrate a n)
+
+theorem product_tetrate_sub_one_no_digit_two (n : ℕ) (hn : 0 < n) :
+    2 ∉ Nat.digits 10 (∏ k ∈ Finset.Icc 1 n, (tetrate 10 k - 1)) := by
+  sorry
+```
