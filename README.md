@@ -821,3 +821,18 @@ theorem product_tetrate_sub_one_no_digit_two (n : ℕ) (hn : 0 < n) :
     2 ∉ Nat.digits 10 (∏ k ∈ Finset.Icc 1 n, (tetrate 10 k - 1)) := by
   sorry
 ```
+
+## 74. Let $a_1 = 11$ and $a_n = 10^{a_{n - 1}}$. Prove that the first five digits of $(10^{a_6} - 3)^{a_7}$ is $49787$
+
+```lean4
+import Mathlib
+
+def a : ℕ → ℕ
+  | 0 => 0
+  | 1 => 11
+  | n + 2 => 10 ^ a (n + 1)
+
+theorem first_five_digits_of_pow :
+    ((Nat.digits 10 ((10 ^ a 6 - 3) ^ a 7)).reverse.take 5) = [4, 9, 7, 8, 7] := by
+  sorry
+```
