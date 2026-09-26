@@ -836,3 +836,18 @@ theorem first_five_digits_of_pow :
     ((Nat.digits 10 ((10 ^ a 6 - 3) ^ a 7)).reverse.take 5) = [4, 9, 7, 8, 7] := by
   sorry
 ```
+
+## 75. Let $n$ be a 10-digit positive integer with no zero digits. Prove that if $n$ has exactly $m$ distinct digits and the median of its digits is $m$, then $m \le 7$
+
+```lean4
+import Mathlib
+
+theorem ten_digit_median_distinct_digits_le_seven
+    (n m : ℕ) (h_digits_len : (Nat.digits 10 n).length = 10)
+      (h_no_zero : 0 ∉ Nat.digits 10 n)
+      (h_median :
+        let s := (Nat.digits 10 n).mergeSort (· ≤ ·)
+        s[4]! + s[5]! = 2 * m)
+      (h_distinct : (Nat.digits 10 n).toFinset.card = m) : m ≤ 7 := by
+  sorry
+```
