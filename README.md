@@ -851,3 +851,17 @@ theorem ten_digit_median_distinct_digits_le_seven
       (h_distinct : (Nat.digits 10 n).toFinset.card = m) : m ≤ 7 := by
   sorry
 ```
+
+## 76. Prove that there are infinitely many positive integers $n$ such that the digit $7$ is the unique modal digit in the base-10 representation of both $(n - 4)^2$ and $n^3 + 12$
+
+```lean4
+import Mathlib
+
+theorem infinite_positive_integers_mode_digit_seven :
+    Set.Infinite { n : ℕ | 0 < n ∧
+      (∀ d : ℕ, d ≠ 7 → (Nat.digits 10 ((n - 4) ^ 2)).count d <
+      (Nat.digits 10 ((n - 4) ^ 2)).count 7) ∧
+      (∀ d : ℕ, d ≠ 7 → (Nat.digits 10 (n ^ 3 + 12)).count d <
+      (Nat.digits 10 (n ^ 3 + 12)).count 7) } := by
+  sorry
+```
