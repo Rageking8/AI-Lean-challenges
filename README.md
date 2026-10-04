@@ -865,3 +865,17 @@ theorem infinite_positive_integers_mode_digit_seven :
       (Nat.digits 10 (n ^ 3 + 12)).count 7) } := by
   sorry
 ```
+
+## 77. Let $sumValidIntegers(l, s)$ be the sum of all positive integers with at most $l$ base-10 digits whose base-10 digit sum is less than or equal to $s$. Prove that if $sumValidIntegers(l, s) \gt 10^{12}$, then the tight lower bound of $s + l$ is $14$
+
+```lean4
+import Mathlib
+
+def sumValidIntegers (l s : ℕ) : ℕ :=
+  ∑ n ∈ (Finset.Ico 1 (10 ^ l)).filter (fun n => (Nat.digits 10 n).sum ≤ s), n
+
+theorem tight_lower_bound_s_add_l :
+    (∀ l s : ℕ, sumValidIntegers l s > 10 ^ 12 → s + l ≥ 14) ∧
+      (∃ l s : ℕ, sumValidIntegers l s > 10 ^ 12 ∧ s + l = 14) := by
+  sorry
+```
