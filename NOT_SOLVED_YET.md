@@ -1,6 +1,6 @@
 # Not solved yet
 
-Possibly unsound problems that have not been solved.
+List of potentially unsound problems that have not been solved by an AI system. Problems here generally fall into two buckets: those that pose genuine mathematical difficulties or are open problems, and those that present challenges in Lean formalization.
 
 ## Problems
 
