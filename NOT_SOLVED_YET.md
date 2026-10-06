@@ -85,6 +85,21 @@ theorem reciprocal_gcd_lcm_system_infinite_solutions :
   sorry
 ```
 
+```lean4
+import Mathlib
+
+def InBase (b : ℕ) (n : ℕ) : ℕ :=
+  Nat.ofDigits b (Nat.digits 10 n)
+
+def R (n d : ℕ) : ℕ := d * ((10 ^ n - 1) / 9)
+
+theorem no_pos_int_a_b_repdigit_in_base :
+    ¬ ∃ (a b : ℕ), 0 < a ∧ 0 < b ∧
+      (InBase b (R 9653 1) : ℤ) + (InBase b (R 3686 4) : ℤ) =
+      (a : ℤ) ^ 3 - (b : ℤ) - 2 := by
+  sorry
+```
+
 ### Require theorems not in Mathlib
 
 Needs the Gelfond–Schneider theorem:
