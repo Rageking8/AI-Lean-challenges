@@ -879,3 +879,17 @@ theorem tight_lower_bound_s_add_l :
       (∃ l s : ℕ, sumValidIntegers l s > 10 ^ 12 ∧ s + l = 14) := by
   sorry
 ```
+
+## 78. Let $\frac{311}{457} = \frac{1}{n_1} + \frac{1}{n_2} + \cdots + \frac{1}{n_k}$ be an Egyptian fraction decomposition, where $n_1, n_2, \ldots, n_k$ are positive integers satisfying $2 \le n_1 \lt n_2 \lt \cdots \lt n_k$. Prove that the tight lower bound for the largest denominator $n_k$ is $3199$
+
+```lean4
+import Mathlib
+
+def IsEgyptianFractionDecomp (q : ℚ) (l : List ℕ) : Prop :=
+  l.Pairwise (· < ·) ∧ (∀ x ∈ l, 2 ≤ x) ∧ (l.map (fun n : ℕ => (1 : ℚ) / (n : ℚ))).sum = q
+
+theorem egyptian_fraction_311_457_tight_lower_bound :
+    (∀ l : List ℕ, IsEgyptianFractionDecomp (311 / 457) l → ∃ n ∈ l, 3199 ≤ n) ∧
+      (∃ l : List ℕ, IsEgyptianFractionDecomp (311 / 457) l ∧ ∀ n ∈ l, n ≤ 3199) := by
+  sorry
+```
