@@ -915,3 +915,20 @@ theorem factorial_add_one_div_eq_iff_x_two_y_three
       (x.factorial : ℚ) ^ (y + 3) ↔ x = 2 ∧ y = 3 := by
   sorry
 ```
+
+## 81. Let $O(n)$ and $E(n)$ denote the number of odd and even digits in the base-10 representation of $n$, respectively. Proof that the smallest positive integer $n$ that satisfies both $(O(n^2 + n))^2 = 3 \cdot O(n)$ and $E(n^2 - n) = 5 \cdot E(n)$ is $1059$
+
+```lean4
+import Mathlib
+
+def O (n : ℕ) : ℕ :=
+  ((Nat.digits 10 n).filter (· % 2 == 1)).length
+
+def E (n : ℕ) : ℕ :=
+  ((Nat.digits 10 n).filter (· % 2 == 0)).length
+
+theorem is_least_pos_int_odd_even_digit_count_eq_1059 :
+    IsLeast { n : ℕ | 0 < n ∧ (O (n ^ 2 + n)) ^ 2 =
+      3 * O n ∧ E (n ^ 2 - n) = 5 * E n } 1059 := by
+  sorry
+```
