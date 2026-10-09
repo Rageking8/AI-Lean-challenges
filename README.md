@@ -903,3 +903,15 @@ theorem floor_ceil_eq_fourth_root (x : ℝ) :
     (⌊x * ⌊x⌋⌋ : ℝ) - (⌈x * ⌈x⌉⌉ : ℝ) ^ 3 = x ^ 4 - 31 ↔ x = (5 : ℝ) ^ ((1 : ℝ) / 4) := by
   sorry
 ```
+
+## 80. Prove that the only positive integer solution to equation $\frac{(x + y - 1)! + 1}{x + y} + 59 = (x!)^{y + 3}$ is $x = 2$ and $y = 3$
+
+```lean4
+import Mathlib
+
+theorem factorial_add_one_div_eq_iff_x_two_y_three
+    (x y : ℕ) (hx : 0 < x) (hy : 0 < y) :
+      ((x + y - 1).factorial + 1 : ℚ) / (x + y : ℚ) + 59 =
+      (x.factorial : ℚ) ^ (y + 3) ↔ x = 2 ∧ y = 3 := by
+  sorry
+```
