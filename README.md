@@ -893,3 +893,13 @@ theorem egyptian_fraction_311_457_tight_lower_bound :
       (∃ l : List ℕ, IsEgyptianFractionDecomp (311 / 457) l ∧ ∀ n ∈ l, n ≤ 3199) := by
   sorry
 ```
+
+## 79. Prove that the only real solution to equation $\left\lfloor x \left\lfloor x \right\rfloor\right\rfloor - \left\lceil x \left\lceil x \right\rceil\right\rceil^3 = x^4 - 31$ is $x = \sqrt[4]{5}$
+
+```lean4
+import Mathlib
+
+theorem floor_ceil_eq_fourth_root (x : ℝ) :
+    (⌊x * ⌊x⌋⌋ : ℝ) - (⌈x * ⌈x⌉⌉ : ℝ) ^ 3 = x ^ 4 - 31 ↔ x = (5 : ℝ) ^ ((1 : ℝ) / 4) := by
+  sorry
+```
