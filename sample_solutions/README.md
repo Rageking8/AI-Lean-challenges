@@ -2,9 +2,11 @@
 
 Bunch of sample solutions from various models.
 
-## Prompts
+## Prompt structure
 
-Normal prompt:
+### First prompt
+
+#### Normal
 
 ```txt
 Complete the following lean 4 proof:
@@ -13,7 +15,7 @@ import Mathlib
 ...
 ```
 
-Golf prompt:
+#### Golf
 
 ```txt
 Complete the following lean 4 proof and golf it to the smallest size possible:
@@ -22,7 +24,9 @@ import Mathlib
 ...
 ```
 
-Follow-up prompts when there are errors:
+### Follow-up prompt
+
+#### Errors
 
 ```txt
 Line <Number> error(s):
