@@ -932,3 +932,16 @@ theorem is_least_pos_int_odd_even_digit_count_eq_1059 :
       3 * O n ∧ E (n ^ 2 - n) = 5 * E n } 1059 := by
   sorry
 ```
+
+## 82. Let $\\{x\\}$ be the fractional part of $x$. Prove that $\displaystyle\prod_{n = 1}^{\infty} \frac{1 + 2\cos\left(\pi\left\\{\frac{25}{2 \cdot 3^n} - \left\\{\frac{16}{2 \cdot 3^n}\right\\}\right\\}\right)}{3} = \frac{2 \sqrt 2}{9 \pi}$
+
+```lean4
+import Mathlib
+
+theorem infinite_product_cos_fract :
+    Filter.Tendsto (fun N => ∏ n ∈ Finset.Icc 1 N,
+      (1 + 2 * Real.cos (Real.pi * Int.fract (25 / (2 * (3 : ℝ) ^ n) -
+      Int.fract (16 / (2 * (3 : ℝ) ^ n))))) / 3)
+      Filter.atTop (nhds ((2 * Real.sqrt 2) / (9 * Real.pi))) := by
+  sorry
+```
