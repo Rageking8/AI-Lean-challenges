@@ -945,3 +945,16 @@ theorem infinite_product_cos_fract :
       Filter.atTop (nhds ((2 * Real.sqrt 2) / (9 * Real.pi))) := by
   sorry
 ```
+
+## 83. Let $S(n)$ be the base-10 digit sum of $n$ and let $a$ and $b$ be 6-digit triangular numbers. Prove that if $b - a = 13761$ and $S(ab) = 54$, then $b$ must be equal to $299151$
+
+```lean4
+import Mathlib
+
+theorem six_digit_triangular_digit_sum (a b : ℕ)
+    (ha_digits : 10 ^ 5 ≤ a ∧ a < 10 ^ 6) (hb_digits : 10 ^ 5 ≤ b ∧ b < 10 ^ 6)
+      (ha_tri : ∃ k : ℕ, a = k * (k + 1) / 2) (hb_tri : ∃ k : ℕ, b = k * (k + 1) / 2)
+      (h_diff : b - a = 13761) (h_sum : (Nat.digits 10 (a * b)).sum = 54) :
+      b = 299151 := by
+  sorry
+```
