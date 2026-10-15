@@ -958,3 +958,16 @@ theorem six_digit_triangular_digit_sum (a b : ℕ)
       b = 299151 := by
   sorry
 ```
+
+## 84. Let $\\{x\\}$ be the fractional part of $x$. Prove that the only real solution that satisfies both $\lceil 3 \lfloor x \rfloor y^2 \rceil + \lfloor y \lfloor x^4 \rfloor \rfloor^2 = 5$ and $\\{x\\} - 3y^2 = 5k + 1$ for some integer $k$, is $x = 1$ and $y = \frac{2}{\sqrt{3}}$
+
+```lean4
+import Mathlib
+
+theorem floor_ceil_fract_system_unique_solution (x y : ℝ) :
+    (Int.ceil (3 * (Int.floor x : ℝ) * y ^ 2) +
+      (Int.floor (y * (Int.floor (x ^ 4) : ℝ))) ^ 2 = 5 ∧
+      ∃ k : ℤ, Int.fract x - 3 * y ^ 2 = 5 * (k : ℝ) + 1) ↔
+      (x = 1 ∧ y = 2 / Real.sqrt 3) := by
+  sorry
+```
