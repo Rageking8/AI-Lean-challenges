@@ -971,3 +971,20 @@ theorem floor_ceil_fract_system_unique_solution (x y : ℝ) :
       (x = 1 ∧ y = 2 / Real.sqrt 3) := by
   sorry
 ```
+
+## 85. Let curve $C$ be defined by $xy^{13} - 4y = x^{5x} - 3x - 1$, for $x \gt 0$. Proof that the tight upper bound on the number of intersections between $C$ and any vertical line is $3$
+
+```lean4
+import Mathlib
+
+def C : Set (ℝ × ℝ) :=
+  { p : ℝ × ℝ | p.1 > 0 ∧ p.1 * p.2 ^ 13 - 4 * p.2 = p.1 ^ (5 * p.1) - 3 * p.1 - 1 }
+
+def verticalLine (x₀ : ℝ) : Set (ℝ × ℝ) :=
+  { p : ℝ × ℝ | p.1 = x₀ }
+
+theorem max_vertical_intersections_xy13_4y :
+    (∀ x₀ : ℝ, Set.encard (C ∩ verticalLine x₀) ≤ 3) ∧
+      (∃ x₀ : ℝ, Set.encard (C ∩ verticalLine x₀) = 3) := by
+  sorry
+```
